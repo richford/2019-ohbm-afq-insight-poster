@@ -136,7 +136,7 @@ The feature matrix, $\mathbf{X}$, has inherent group structure, containing group
 The high dimensionality of the data ($n_\text{features} \sim \mathcal{O}(10^4)$) requires regularization to avoid overfitting. We use the Sparse Group Lasso (SGL),
 \vspace{-0.5em}
 \begin{equation*}
-    \widehat{\beta} = \min_\beta \Biggl\{ 
+    \widehat{\beta} = \min_\beta \Biggl\{
         \underbrace{
             \vphantom{\lambda_1 \displaystyle \sum_\ell \sqrt{p_\ell} \norm{\beta^{(\ell)}}_2}
             \norm{\widehat{y} - \mathbf{X} \cdot \beta}_2^2
@@ -189,7 +189,7 @@ SGL enforces sparsity at both the \textbf{inter}-group level (using $\lambda_1$)
 \includegraphics[height=0.88cm]{SloanLogo.png}
 \includegraphics[height=0.88cm]{MooreFdn.png}
 \includegraphics[height=0.88cm]{eSciencelogo.png}
-} 
+}
 
 %----------------------------------------------------------------------------
 %	RESULTS 1
@@ -212,14 +212,14 @@ SGL enforces sparsity at both the \textbf{inter}-group level (using $\lambda_1$)
     \captionof{figure}{\textbf{left}: Classification probabilities for each subject's ALS diagnosis. Controls are on the left while subjects with ALS are on the right. Predicted controls are in blue and predicted patients are in red. Thus false positives are represented as red dots on the left while false negatives are represented as blue dots on the right. \textbf{right}: The tract profiles of the misclassified subjects suggest that they are justifiably hard to classify.}
 \end{Figure}
 \begin{itemize}[noitemsep, leftmargin=*]
-\item Moreover, it automatically identifies the corticospinal tract (CST) as the critical feature for differentiating ALS patients from controls
+\item Moreover, it automatically identifies the corticospinal tract (CST) as the critical feature for differentiating patients with ALS from controls
 \item Thus, well-known features of the disease can be recovered through an automated, data-driven approach.
 \end{itemize}
 \begin{Figure}
     \centering
     \includegraphics[height=0.28\linewidth, valign=t]{classification_beta_bupu.png}
     \includegraphics[height=0.28\linewidth, valign=t]{classification_tract_profiles.pdf}
-    \captionof{figure}{Classification feature importance: \textbf{left}: $\widehat{\beta}$ for the FA metric, represented along the ``core fibers'' for each tract. The feature importance is sparse and dominated by the right CST. \textbf{right}: The FA tract profiles for the right CST, grouped by ALS class and the mean $\widehat{\beta}$ (dotted, black). Larger $\widehat{\beta}$ values indicate areas of distinction between ALS status.}
+    \captionof{figure}{Classification feature importance: \textbf{left}: $\widehat{\beta}$ for the FA metric, represented along the ``core fibers'' for each tract. The feature importance is sparse and dominated by the right CST. \textbf{right}: The FA tract profiles for the right CST, grouped by ALS class and the mean $\widehat{\beta}$ (dotted, black). Larger $\widehat{\beta}$ values indicate areas of distinction between patients with ALS and controls.}
 \end{Figure}
 }
 
